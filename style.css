@@ -11,6 +11,14 @@ body {
   margin: 0 auto;
 }
 
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Playfair Display", Courier, monospace;
+}
+
 .hero {
   position: relative;
   display: flex;
@@ -25,15 +33,14 @@ body {
   width: 100%;
   height: 100%;
   background-color: #0086a8;
-  transform: skewY(-11deg);
-  transform-origin: left;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
 }
 
 .hero .content {
   max-width: 1920px;
   display: flex;
   align-items: center;
-  padding: 60px 40px;
+  padding: 80px 40px;
 }
 
 /* Hero image */
@@ -51,7 +58,6 @@ body {
 }
 
 .name {
-  font-family: "Playfair Display", Courier, monospace;
   text-align: center;
   width: 100%;
   font-weight: 300;
@@ -73,15 +79,13 @@ body {
 }
 
 .about-me h2 {
-  font-family: "Playfair Display", Courier, monospace;
   font-size: 3.4rem;
   font-weight: 300;
   margin-bottom: 24px;
 }
 
 .about-me p {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1.5;
   margin-bottom: 60px;
   color: #585756;
@@ -95,4 +99,65 @@ body {
 
 .about-me .icons img {
   width: 44px;
+}
+
+/* Main */
+main {
+  padding: 80px 40px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+}
+
+/* My work */
+.my-work h2 {
+  font-size: 3.4rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 40px 60px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 460px), 1fr));
+}
+
+.project-box {
+  min-height: 500px;
+  box-shadow: 0.3em 0.3em 1em rgba(48, 48, 49, 0.6);
+}
+
+.project-screenshot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 200px;
+  background-color: rgb(102, 102, 177);
+}
+
+.project-box .info {
+  padding: 2rem;
+}
+
+.links a img {
+  width: 32px;
+}
+
+.info div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info div h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.project-description {
+  font-size: 1.2rem;
+  color: #585756;
 }
