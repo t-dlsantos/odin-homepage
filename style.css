@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero .content .image-container img {
-  max-width: 460px;
+  max-width: 500px;
   object-fit: cover;
   width: fit-content;
 }
@@ -117,6 +117,9 @@ h1, h2, h3, h4, h5 {
     flex-direction: column;
   }
 
+  .hero .content .image-container img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1000px) and (min-width: 801px) {
@@ -150,8 +153,6 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-
-
 /* Main */
 main {
   padding: 80px 20px;
@@ -170,8 +171,8 @@ main {
 
 .projects-grid {
   display: grid;
-  gap: 40px 60px;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 460px), 1fr));
+  gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
 }
 
 .project-box {
@@ -185,8 +186,8 @@ main {
   justify-content: center;
   text-align: center;
   width: 100%;
-  height: 200px;
   background-color: rgb(102, 102, 177);
+  padding: 60px;
 }
 
 .project-box .info {
@@ -220,12 +221,28 @@ footer {
   color: white;
 }
 
-.wrapper {
+footer .wrapper {
   max-width: 1280px;
   padding: 20px;
   margin: 0 auto;
   display: flex;
   gap: 20px;
+}
+
+@media (max-width: 800px) {
+  footer h2 {
+    text-align: center;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer .wrapper .image-container img {
+    width: 100%;
+  }
+
 }
 
 footer h2 {
